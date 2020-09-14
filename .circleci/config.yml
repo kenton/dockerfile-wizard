@@ -6,7 +6,7 @@ image_config: &image_config
 
   IMAGE_NAME: mc-container
 
-  IMAGE_TAG: test
+  IMAGE_TAG: 0.0.1
 
   # NOTE: if you're modifying this config.yml file manually
   # rather than using the included setup script,
@@ -19,7 +19,7 @@ image_config: &image_config
 
   NODE_VERSION_NUM: 12.16.1
 
-  # PYTHON_VERSION_NUM: # pick a version from https://python.org/ftp/python
+  # # PYTHON_VERSION_NUM: # pick a version from https://python.org/ftp/python
 
   JAVA: false
 
@@ -54,7 +54,7 @@ jobs:
 
   test_image:
     docker:
-      - image: $DOCKER_USERNAME/mc-container:test
+      - image: $DOCKER_USERNAME/mc-container:0.0.1
         environment:
           <<: *image_config
 
